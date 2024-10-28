@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { ToastContainer } from 'react-toastify';
 import { ProtectedRoute, PublicRoute, MainContainer } from './components/index.jsx';
-import { LoginPage, ProfilePage, RequestsPage } from './pages';
+import { LoginPage, ProfilePage, RequestsPage, HelpRequestPage, NotFoundPage } from './pages';
 
 export default function App() {
   return (
@@ -20,10 +20,10 @@ export default function App() {
 
             <Route element={<ProtectedRoute />}>
               <Route path="/profile" element={<ProfilePage />} />
-              <Route path="/help-request" element={<HelpRequest />} />
+              <Route path="/help-request" element={<HelpRequestPage />} />
               <Route path="/requests" element={<RequestsPage />} />
             </Route>
-            <Route path="*" element={<NotFound />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
 
           <ToastContainer
