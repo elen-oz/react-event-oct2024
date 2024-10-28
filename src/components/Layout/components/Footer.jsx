@@ -4,44 +4,41 @@ import { Box, Typography } from '@mui/material';
 import Link from '@mui/material/Link';
 
 export default function Footer() {
+
+  const links = [
+    {
+      url: 'https://t.me/natti_jun_front/239',
+      text: 'Об ивенте',
+    },
+    {
+      url: 'https://github.com/side-progects/react-event-oct2024',
+      text: 'GitHub проекта',
+    },
+    {
+      url: 'https://t.me/natti_jun_front_chat',
+      text: 'Чат для джунов',
+    },
+  ];
+
   return (
     <Box
       display="flex"
-      alignItems="center"
-      justifyContent="center"
-      width="100%"
-      sx={{
-        height: '152px',
-      }}
+      align-content="center"
+      height="70px"
     >
       <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
-        <Typography>
+        {links.map((link) => (
           <Link
-            href="https://t.me/natti_jun_front/239"
+            key={link.url}
+            href={link.url}
             target="_blank"
-            sx={{ textDecoration: 'none', color: '#000000' }}
+            underline="hover"
+            sx={{ color: '#000000' }}
           >
-            Об ивенте
+            {link.text}
           </Link>
-        </Typography>
-        <Typography>
-          <Link
-            href="https://github.com/side-progects/react-event-oct2024"
-            target="_blank"
-            sx={{ textDecoration: 'none', color: '#000000' }}
-          >
-            GitHub проекта
-          </Link>
-        </Typography>
-        <Typography>
-          <Link
-            href="https://t.me/natti_jun_front_chat"
-            target="_blank"
-            sx={{ textDecoration: 'none', color: '#000000' }}
-          >
-            Чат для джунов
-          </Link>
-        </Typography>
+        ))}
+
       </Box>
     </Box>
   );
