@@ -2,9 +2,10 @@ import { useState } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
-// eslint-disable-next-line import/extensions
-import Personaldata from './Personaldata.jsx';
-import Contacts from './Contacts.jsx';
+// eslint-disable-next-line import/extensions,import/namespace
+import ProfileDataTabItem from './ProfileDataTabItem.jsx';
+import ContactsTabItem from './ContactsTabItem.jsx';
+import FavouriteCardsTabItem from './FavouriteCardsTabItem.jsx';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -46,13 +47,13 @@ const TabsSection = ({ userData }) => {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <Personaldata userData={userData} />
+        <ProfileDataTabItem userData={userData} />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Contacts userData={userData} />
+        <ContactsTabItem userData={userData} />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <FavouritesCards />
+        <FavouriteCardsTabItem />
       </TabPanel>
     </Box>
   );

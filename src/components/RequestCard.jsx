@@ -3,11 +3,10 @@ import React, { useState } from 'react';
 import { Star, StarBorder } from '@mui/icons-material';
 import { Box, Button, Divider, IconButton, LinearProgress, Paper, Typography } from '@mui/material';
 import { toast } from 'react-toastify';
-
-import { addToFavorites, removeFromFavorites } from '../../api/request.js';
-import image1 from '../../assets/requestCard1.png';
-import image2 from '../../assets/requestCard2.png';
-import image3 from '../../assets/requestCard3.png';
+import { addToFavorites, removeFromFavorites } from '../api/request.js';
+import image1 from '../assets/requestCard1.png';
+import image2 from '../assets/requestCard2.png';
+import image3 from '../assets/requestCard3.png';
 
 const images = [image1, image2, image3];
 
@@ -16,7 +15,7 @@ function getRandomImage() {
   return images[randomIndex];
 }
 
-function RequestCard({ request }) {
+export default function RequestCard({ request }) {
   const {
     id,
     title,
@@ -38,11 +37,11 @@ function RequestCard({ request }) {
     try {
       if (!isFavorited) {
         await addToFavorites(id);
-        console.log('added ', id);
+        console.info('added ', id);
         toast.success('Added to favorites!');
       } else {
         await removeFromFavorites(id);
-        console.log('deleted', id);
+        console.info('deleted', id);
         toast.info('Removed from favorites.');
       }
       setIsFavorited(!isFavorited);
@@ -227,5 +226,3 @@ function RequestCard({ request }) {
     </Paper>
   );
 }
-
-export default RequestCard;

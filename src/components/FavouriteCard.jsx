@@ -4,10 +4,10 @@ import { Star, StarBorder } from '@mui/icons-material';
 import { Box, Button, Divider, IconButton, LinearProgress, Paper, Typography } from '@mui/material';
 import { toast } from 'react-toastify';
 
-import { addToFavorites, removeFromFavorites } from '../../api/request.js';
-import image1 from '../../assets/requestCard1.png';
-import image2 from '../../assets/requestCard2.png';
-import image3 from '../../assets/requestCard3.png';
+import { addToFavorites, removeFromFavorites } from '../api/request.js';
+import image1 from '../assets/requestCard1.png';
+import image2 from '../assets/requestCard2.png';
+import image3 from '../assets/requestCard3.png';
 
 const images = [image1, image2, image3];
 

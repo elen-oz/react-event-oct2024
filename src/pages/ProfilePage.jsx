@@ -1,9 +1,9 @@
 import { Typography, Box } from '@mui/material';
-import ProfileCard from '../../components/ProfileCard.jsx';
-import TabsSection from '../../components/TabsSection.jsx';
+import ProfileCard from '../components/ProfileCard.jsx';
+import TabsSection from '../components/TabsSection.jsx';
 import { useEffect, useState } from 'react';
 
-import { fetchUserProfile } from '../../api/user.js';
+import { fetchUserProfile } from '../api/user.js';
 
 const ProfilePage = () => {
   const [userData, setUserData] = useState(null);

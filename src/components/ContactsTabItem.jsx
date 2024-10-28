@@ -1,6 +1,6 @@
 import { Typography, List, ListItem, Box, Stack } from '@mui/material';
 
-function Contacts({ userInfo }) {
+function ContactsTabItem({ userInfo }) {
   return (
     <Stack
       sx={{
@@ -114,7 +114,6 @@ function Contacts({ userInfo }) {
                 p: 0,
               }}
             >
-              {/* <a href={userInfo.socials.vk} style={{ display: "flex", alignItems: "center" }}> */}
               <a
                 href="#"
                 style={{
@@ -170,7 +169,6 @@ function Contacts({ userInfo }) {
                 p: 0,
               }}
             >
-              {/* <a href={userInfo.socials.whatsup} style={{ display: "flex", alignItems: "center" }}> */}
               <a
                 href="#"
                 style={{
@@ -204,4 +202,4 @@ function Contacts({ userInfo }) {
   );
 }
 
-export default Contacts;
+export default ContactsTabItem;

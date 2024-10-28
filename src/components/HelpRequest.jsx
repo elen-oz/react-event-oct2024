@@ -2,7 +2,7 @@ import { Typography, Box, Stack, Paper } from '@mui/material';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
-function Index() {
+function HelpRequest() {
   return (
     <Paper sx={{ width: '750px', backgroundColor: 'white' }}>
       <Box sx={{ width: '550px', backgroundColor: 'white', pl: '20px', pt: '20px', pb: '20px' }}>
@@ -145,4 +145,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default HelpRequest;

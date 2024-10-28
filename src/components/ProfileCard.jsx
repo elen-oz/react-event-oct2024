@@ -1,9 +1,21 @@
 import React from 'react';
 import { Box, Typography, Stack, Button, Card } from '@mui/material';
 import ProfileImg from '../assets/CardMedia.svg';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext.jsx';
 
 const ProfileCard = ({ userData }) => {
-  console.log('userData', userData);
+  const navigate = useNavigate();
+  const { logout } = useAuth();
+
+  const handleLogout = async () => {
+    try {
+      logout();
+      navigate('/');
+    } catch (error) {
+      console.error('Ошибка при выходе:', error);
+    }
+  };
 
   return (
     <Card variant="outlined">
@@ -27,7 +39,7 @@ const ProfileCard = ({ userData }) => {
           </Stack>
         </Box>
 
-        <Button variant="outlined" fullWidth color="inherit">
+        <Button onClick={handleLogout} variant="outlined" fullWidth color="inherit">
           Выйти из аккаунта
         </Button>
       </Stack>

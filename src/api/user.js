@@ -5,7 +5,7 @@ export const fetchUserProfile = async () => {
     const response = await api.get('/user/profile');
     return response.data;
   } catch (error) {
-    console.error('Error fetching user profile:', error);
+    console.error('Error fetching user profile page:', error);
     throw error;
   }
 };

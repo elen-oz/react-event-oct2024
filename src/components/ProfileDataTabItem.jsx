@@ -1,6 +1,7 @@
+import React from 'react';
 import { Container, Typography, Box, Stack } from '@mui/material';
 
-function Personaldata({ userData }) {
+const ProfileDataTabItem = ({ userData }) => {
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('ru-RU');
@@ -18,7 +19,7 @@ function Personaldata({ userData }) {
           </Typography>
           <Typography variant="body2" sx={{ fontSize: '14px' }}>
             &nbsp;
-            {userData?.lastName}
+            {userData.lastName}
           </Typography>
         </Stack>
         <Stack direction="row" spacing={0.5}>
@@ -27,7 +28,7 @@ function Personaldata({ userData }) {
           </Typography>
           <Typography variant="body2" sx={{ fontSize: '14px' }}>
             &nbsp;
-            {userData?.name}
+            {userData.name}
           </Typography>
         </Stack>
         <Stack direction="row" spacing={0.5}>
@@ -36,7 +37,7 @@ function Personaldata({ userData }) {
           </Typography>
           <Typography variant="body2" sx={{ fontSize: '14px' }}>
             &nbsp;
-            {userData?.status}
+            {userData.status}
           </Typography>
         </Stack>
       </Box>
@@ -46,7 +47,7 @@ function Personaldata({ userData }) {
           Дата рождения
         </Typography>
         <Typography variant="body2" sx={{ fontSize: '14px' }}>
-          {userData?.birthdate ? formatDate(userData.birthdate) : ''}
+          {userData.birthdate ? formatDate(userData.birthdate) : ''}
         </Typography>
       </Box>
 
@@ -54,7 +55,7 @@ function Personaldata({ userData }) {
         <Typography variant="h6" sx={{ mb: 1.5 }}>
           Локация для помощи
         </Typography>
-        {userData?.baseLocations?.map((location, index) => (
+        {userData.baseLocations.map((location, index) => (
           <Box key={index} sx={{ mb: index !== userData.baseLocations.length - 1 ? 2 : 0 }}>
             <Stack direction="row" spacing={0.5}>
               <Typography variant="subtitle2" sx={{ fontSize: '14px', mb: 0.5 }}>
@@ -80,7 +81,7 @@ function Personaldata({ userData }) {
         <Typography variant="h6" sx={{ mb: 1.5 }}>
           Образование
         </Typography>
-        {userData?.educations?.map((education, index) => (
+        {userData.educations.map((education, index) => (
           <Box key={index} sx={{ mb: index !== userData.educations.length - 1 ? 2 : 0 }}>
             <Stack direction="row" spacing={0.5}>
               <Typography variant="subtitle2" sx={{ fontSize: '14px', mb: 0.5 }}>
@@ -125,11 +126,11 @@ function Personaldata({ userData }) {
           Обо мне
         </Typography>
         <Typography variant="body2" sx={{ fontSize: '14px' }} className="aboutMe">
-          {userData?.additionalInfo}
+          {userData.additionalInfo}
         </Typography>
       </Box>
     </Container>
   );
-}
+};
 
-export default Personaldata;
+export default ProfileDataTabItem;
