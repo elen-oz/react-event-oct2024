@@ -5,10 +5,10 @@ import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { Box, IconButton, InputAdornment, TextField, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import { toast } from 'react-toastify';
-import { useAuth } from '../../context/AuthContext';
+import { useAuth } from '../context/AuthContext.jsx';
 
-import users from '../../data/userData.js';
-import ProfileLogin from './profileLogin.jsx';
+import users from '../data/userData.js';
+import ExampleLoginSection from '../components/ExampleLoginSection.jsx';
 
 function LoginPage() {
   const { currentUser, login, isLoading } = useAuth();
@@ -174,7 +174,7 @@ function LoginPage() {
           }}
         >
           {users.map((user) => (
-            <ProfileLogin
+            <ExampleLoginSection
               key={user.login}
               title={user.title}
               login={user.login}

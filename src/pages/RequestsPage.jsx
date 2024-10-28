@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 import { Box, Typography } from '@mui/material';
 
-import RequestList from '../../components/RequestList.jsx';
-import HelperFilterPanel from '../../components/HelperFilterPanel.jsx';
-import SearchResultsHeader from '../../components/SearchSection.jsx';
+import RequestList from '../components/RequestList.jsx';
+import HelperFilterPanel from '../components/HelperFilterPanel.jsx';
+import SearchResultsHeader from '../components/SearchSection.jsx';
 
 function RequestsPage() {
   const [searchWord, setSearchWord] = useState('');

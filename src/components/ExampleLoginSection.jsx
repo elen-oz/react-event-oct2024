@@ -4,10 +4,10 @@ import InfoIcon from '@mui/icons-material/Info';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { Box, Paper, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import CopyToClipboard from '../../components/CopyToClipboard.jsx';
+import CopyToClipboard from './CopyToClipboard.jsx';
 
 // eslint-disable-next-line react/prop-types
-function ProfileLogin({ login, password }) {
+function ExampleLoginSection({ login, password }) {
   const theme = useTheme();
   return (
     <Paper
@@ -51,4 +51,4 @@ function ProfileLogin({ login, password }) {
   );
 }
 
-export default ProfileLogin;
+export default ExampleLoginSection;

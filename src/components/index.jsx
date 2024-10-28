@@ -22,6 +22,7 @@ import RequestCard from './RequestCard.jsx';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import MainContainer from './MainContainer.jsx';
+import ExampleLoginSection from './ExampleLoginSection.jsx';
 
 export {
   Header,
@@ -48,4 +49,5 @@ export {
   FavouriteCard,
   ResultsHeader,
   RequestCard,
+  ExampleLoginSection,
 };

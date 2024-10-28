@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography, Box } from '@mui/material';
-import HelpRequest from '../../components/HelpRequest.jsx';
-import GotMoney from '../../components/GotMoney.jsx';
+import HelpRequest from '../components/HelpRequest.jsx';
+import GotMoney from '../components/GotMoney.jsx';
 
 const HelpRequestPage = () => {
   return (

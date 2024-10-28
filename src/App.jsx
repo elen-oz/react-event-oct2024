@@ -1,21 +1,14 @@
 import React from 'react';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
-
-import { ProtectedRoute, PublicRoute, MainContainer } from './components/index.jsx';
-
-import { AuthProvider } from './context/AuthContext';
-
 import 'react-toastify/dist/ReactToastify.css';
 
-import LoginPage from './pages/LoginPage';
-import ProfilePage from './pages/ProfilePage';
-import RequestsPage from './pages/./RequestsPage';
-import HelpRequest from './pages/HelpRequestPage';
-import NotFound from './pages/NotFoundPage/index.jsx';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import { ToastContainer } from 'react-toastify';
+import { ProtectedRoute, PublicRoute, MainContainer } from './components/index.jsx';
+import { LoginPage, ProfilePage, RequestsPage } from './pages';
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
@@ -50,5 +43,3 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;
