@@ -77,11 +77,10 @@ function GotMoney() {
           Нас уже: 3 566 987
         </Typography>
 
-        <Link component={RouterLink} to="/requests"
-              color="inherit" underline="none">
-                <Button variant="contained" color="primary" fullWidth sx={{ borderRadius: '0px', mt: 3 }}>
-                    ПОМОЧЬ
-                </Button>
+        <Link component={RouterLink} to="/requests" color="inherit" underline="none">
+          <Button variant="contained" color="primary" fullWidth sx={{ borderRadius: '0px', mt: 3 }}>
+            ПОМОЧЬ
+          </Button>
         </Link>
       </CardContent>
     </Card>

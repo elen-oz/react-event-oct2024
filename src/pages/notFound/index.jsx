@@ -38,19 +38,11 @@ const NotFoundPage = () => {
       </Typography>
 
       <Box sx={{ display: 'flex', gap: 2 }}>
-        <Button
-          variant="contained"
-          onClick={handleGoHome}
-          sx={{ minWidth: '120px' }}
-        >
+        <Button variant="contained" onClick={handleGoHome} sx={{ minWidth: '120px' }}>
           На главную
         </Button>
 
-        <Button
-          variant="outlined"
-          onClick={handleGoBack}
-          sx={{ minWidth: '120px' }}
-        >
+        <Button variant="outlined" onClick={handleGoBack} sx={{ minWidth: '120px' }}>
           Назад
         </Button>
       </Box>

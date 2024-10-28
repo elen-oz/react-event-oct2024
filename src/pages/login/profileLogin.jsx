@@ -26,20 +26,24 @@ function ProfileLogin({ login, password }) {
       </Box>
 
       <Box display="flex" flexDirection="column" alignItems="flex-start">
-        <Box sx={{
-          width: '270px',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}>
+        <Box
+          sx={{
+            width: '270px',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}
+        >
           <Typography>Логин: {login}</Typography> <CopyToClipboard text={login} />
         </Box>
-        <Box sx={{
-          width: '270px',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}>
+        <Box
+          sx={{
+            width: '270px',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}
+        >
           <Typography>Пароль: {password}</Typography> <CopyToClipboard text={password} />
         </Box>
       </Box>

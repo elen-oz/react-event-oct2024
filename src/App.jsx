@@ -32,7 +32,7 @@ function App() {
               <Route path="/help-request" element={<HelpRequest />} />
               <Route path="/requests" element={<Requests />} />
             </Route>
-             <Route path="*" element={<NotFound />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
 
           <ToastContainer

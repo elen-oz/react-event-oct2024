@@ -20,11 +20,10 @@ function Header() {
       <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
         <img src={HeaderImg} alt="header image" loading="lazy" />
 
-        <Link component={RouterLink} to="/requests"
-              color="inherit" underline="none">
-         <Typography>Запросы о помощи</Typography>
+        <Link component={RouterLink} to="/requests" color="inherit" underline="none">
+          <Typography>Запросы о помощи</Typography>
         </Link>
-       
+
         <AuthButton />
       </Box>
     </Box>
