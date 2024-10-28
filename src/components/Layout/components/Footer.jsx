@@ -4,7 +4,6 @@ import { Box, Typography } from '@mui/material';
 import Link from '@mui/material/Link';
 
 export default function Footer() {
-
   const links = [
     {
       url: 'https://t.me/natti_jun_front/239',
@@ -21,11 +20,7 @@ export default function Footer() {
   ];
 
   return (
-    <Box
-      display="flex"
-      align-content="center"
-      height="70px"
-    >
+    <Box display="flex" align-content="center" height="70px">
       <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
         {links.map((link) => (
           <Link
@@ -38,7 +33,6 @@ export default function Footer() {
             {link.text}
           </Link>
         ))}
-
       </Box>
     </Box>
   );
