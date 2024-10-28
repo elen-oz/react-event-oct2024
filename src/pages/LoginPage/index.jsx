@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { Box, IconButton, InputAdornment, TextField, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { useAuth } from '../../context/AuthContext';
 
 import users from '../../data/userData.js';
 import ProfileLogin from './profileLogin.jsx';
-import { useNavigate } from 'react-router-dom';
 
 function LoginPage() {
   const { currentUser, login, isLoading } = useAuth();

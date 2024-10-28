@@ -4,7 +4,7 @@ import GridViewIcon from '@mui/icons-material/GridView';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { Box, Typography, IconButton } from '@mui/material';
 
-function ResultsHeader() {
+export default function ResultsHeader() {
   return (
     <Box
       sx={{
@@ -33,5 +33,3 @@ function ResultsHeader() {
     </Box>
   );
 }
-
-export default ResultsHeader;

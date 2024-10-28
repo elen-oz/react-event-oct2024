@@ -2,14 +2,14 @@ import { useEffect, useState } from 'react';
 
 import { Box, Pagination, Typography } from '@mui/material';
 
-import { fetchRequestById, getFromFavorites } from '../../api/request.js';
-import Error from '../Error.jsx';
-import ErrorNotFound from '../ErrorNotFound.jsx';
-import FavouriteCard from '../RequestCard/favCard.jsx';
+import { fetchRequestById, getFromFavorites } from '../api/request.js';
+import Error from './Error.jsx';
+import ErrorNotFound from './ErrorNotFound.jsx';
+import FavouriteCard from './FavouriteCard.jsx';
 
 const ITEMS_PER_PAGE = 3;
 
-function FavouritesCards() {
+function FavouriteCardsTabItem() {
   const [favorites, setFavorites] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -98,4 +98,4 @@ function FavouritesCards() {
     </Box>
   );
 }
-export default FavouritesCards;
+export default FavouriteCardsTabItem;

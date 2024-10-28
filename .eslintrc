@@ -17,37 +17,18 @@
     "node": true
   },
   "rules": {
-    "import/extensions": "off",
-    "import/order": [
-      2,
+    "no-console": [
+      "error",
       {
-        "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": false
-        },
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index"
-        ],
-        "newlines-between": "always",
-        "pathGroups": [
-          {
-            "pattern": "react",
-            "group": "external",
-            "position": "before"
-          }
-        ],
-        "pathGroupsExcludedImportTypes": [
-          "react"
+        "allow": [
+          "warn",
+          "error",
+          "info"
         ]
       }
     ],
+    "import/extensions": "off",
     "import/prefer-default-export": "off",
-    "no-use-before-define": "off",
     "react/prop-types": "off"
   },
   "extends": [

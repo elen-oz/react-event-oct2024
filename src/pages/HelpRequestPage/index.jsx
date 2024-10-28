@@ -1,8 +1,9 @@
+import React from 'react';
 import { Typography, Box } from '@mui/material';
-import Help from '../../components/help/index.jsx';
+import HelpRequest from '../../components/HelpRequest.jsx';
 import GotMoney from '../../components/GotMoney.jsx';
 
-const HelpRequest = () => {
+const HelpRequestPage = () => {
   return (
     <Box width="1200px" sx={{ backgroundColor: '#F5F5F5', padding: 4 }}>
       <Typography variant="h5" sx={{ mb: 3 }}>
@@ -11,7 +12,7 @@ const HelpRequest = () => {
 
       <Box display="flex" justifyContent="between" alignItems="start" sx={{ gap: 2 }}>
         <Box sx={{ width: '1080px' }}>
-          <Help />
+          <HelpRequest />
         </Box>
         <Box sx={{ width: '320px' }}>
           <GotMoney />
@@ -21,4 +22,4 @@ const HelpRequest = () => {
   );
 };
 
-export default HelpRequest;
+export default HelpRequestPage;

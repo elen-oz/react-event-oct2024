@@ -5,11 +5,11 @@ import GridViewIcon from '@mui/icons-material/GridView';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { Box, IconButton, Pagination, Typography } from '@mui/material';
 
-import { fetchRequests } from '../../api/request.js';
-import Error from '../Error.jsx';
-import RequestsNotFound from '../RequestNotFound.jsx';
+import { fetchRequests } from '../api/request.js';
+import Error from './Error.jsx';
+import RequestsNotFound from './RequestNotFound.jsx';
 
-import RequestCard from './index.jsx';
+import RequestCard from './RequestCard.jsx';
 
 const ITEMS_PER_PAGE = 3;
 

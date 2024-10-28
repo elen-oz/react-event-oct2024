@@ -3,25 +3,23 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 
-import ProtectedRoute from './components/ProtectedRoute';
-import PublicRoute from './components/PublicRoute';
+import { ProtectedRoute, PublicRoute, MainContainer } from './components/index.jsx';
+
 import { AuthProvider } from './context/AuthContext';
 
 import 'react-toastify/dist/ReactToastify.css';
-import { Layout } from './components/Layout';
 
-import LoginPage from './pages/login';
-import ProfilePage from './pages/profile';
-import Requests from './pages/requests';
-
-import HelpRequest from './pages/helpRequest';
-import NotFound from './pages/notFound/index.jsx';
+import LoginPage from './pages/LoginPage';
+import ProfilePage from './pages/ProfilePage';
+import RequestsPage from './pages/./RequestsPage';
+import HelpRequest from './pages/HelpRequestPage';
+import NotFound from './pages/NotFoundPage/index.jsx';
 
 function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
-        <Layout>
+        <MainContainer>
           <Routes>
             <Route element={<PublicRoute />}>
               <Route path="/" element={<LoginPage />} />
@@ -30,7 +28,7 @@ function App() {
             <Route element={<ProtectedRoute />}>
               <Route path="/profile" element={<ProfilePage />} />
               <Route path="/help-request" element={<HelpRequest />} />
-              <Route path="/requests" element={<Requests />} />
+              <Route path="/requests" element={<RequestsPage />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
@@ -47,7 +45,7 @@ function App() {
             pauseOnHover
             theme="light"
           />
-        </Layout>
+        </MainContainer>
       </AuthProvider>
     </BrowserRouter>
   );

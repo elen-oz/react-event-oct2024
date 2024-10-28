@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 
 import { Box, Typography } from '@mui/material';
 
-import RequestList from '../../components/RequestCard/requestList.jsx';
-import FilterPanel from '../../components/Requests/filterPanel.jsx';
-import SearchResultsHeader from '../../components/Requests/searchSection.jsx';
+import RequestList from '../../components/RequestList.jsx';
+import HelperFilterPanel from '../../components/HelperFilterPanel.jsx';
+import SearchResultsHeader from '../../components/SearchSection.jsx';
 
-function Requests() {
+function RequestsPage() {
   const [searchWord, setSearchWord] = useState('');
 
   const handleSearchChange = (event) => {
@@ -48,7 +48,7 @@ function Requests() {
         >
           {/* filter */}
           <Box sx={{ display: 'flex', padding: '0 20px' }}>
-            <FilterPanel />
+            <HelperFilterPanel />
           </Box>
 
           {/* main section */}
@@ -95,4 +95,4 @@ function Requests() {
   );
 }
 
-export default Requests;
+export default RequestsPage;

@@ -6,9 +6,9 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import dayjs from 'dayjs';
 
-import HelpFilter from './helperFilter.jsx';
+import HelpFilter from './HelperFilter.jsx';
 
-function FilterPanel() {
+function HelperFilterPanel() {
   const [selectedDate, setSelectedDate] = useState(dayjs());
 
   return (
@@ -121,4 +121,4 @@ function FilterPanel() {
   );
 }
 
-export default FilterPanel;
+export default HelperFilterPanel;
